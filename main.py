@@ -47,7 +47,7 @@ for line in fh:
     for key, value in categories.items():
         print("(", key, ") - ", value[0], sep="")
 
-    input_cat = input()
+    input_cat = input("Category: ")
 
     if input_cat == "stop":
         break
