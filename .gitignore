@@ -12,3 +12,5 @@ venv.bak/
 
 # Chase CSVs
 chase_csv/
+
+spendings.json

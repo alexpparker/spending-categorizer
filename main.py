@@ -1,3 +1,5 @@
+import json
+
 # Introduction
 print("Welcome to our chase csv categorizer!\n"
 "For each entry, input the key which corresponds with the correct category for \
@@ -19,7 +21,8 @@ categories = {
     "u": ["utilities", 0]
 }
 
-spendings = {}
+spendings = json.load(open("spendings.json"))
+
 
 new_csv = input("Enter your csv file name within chase_csv without extension: ")
 # Error handling
@@ -70,3 +73,5 @@ for category in categories.values():
     print("For ", category[0], " you spent $", category[1], sep="")
 
 print("\nYou spent a total of $", round(total, 2), " this month.", sep="")
+
+open("spendings.json", "w").write(json.dumps(spendings, indent = 4))
