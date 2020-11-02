@@ -21,11 +21,11 @@ categories = {
 
 spendings = {}
 
-new_csv = input("Enter your csv file name: ")
+new_csv = input("Enter your csv file name within chase_csv without extension: ")
 # Error handling
 while True:
     try:
-        fh = open(new_csv)
+        fh = open("chase_csv/" + new_csv + ".csv")
         next(fh)
         break
     except:
