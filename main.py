@@ -36,7 +36,7 @@ while True:
 
 for line in fh:
     line = line.strip().split(",")
-    date, _, establishment, chase_category, _, charge = line
+    date, _, establishment, chase_category, _, charge, _ = line
 
     spending_category = spendings.get(establishment + "_" + chase_category)
     if spending_category is not None:
